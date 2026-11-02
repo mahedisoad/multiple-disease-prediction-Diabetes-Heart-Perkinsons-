@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/predict/
+
+Sitemap: https://multiple-disease-predictor.onrender.com/sitemap.xml

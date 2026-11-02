@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered Multiple Disease Prediction System — predict Diabetes, Heart Disease, and Parkinson's Disease accurately using machine learning models.">
+    <meta name="keywords" content="disease prediction, machine learning health, diabetes predictor, heart disease prediction, parkinsons detection, ai diagnosis, fastapi ml">
+    <meta name="author" content="Mahedi Hasan Soad">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0e17">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://multiple-disease-prediction.onrender.com/">
+    <meta property="og:title" content="Multiple Disease Prediction System — AI Health Diagnostics">
+    <meta property="og:description" content="Assess health risks for Diabetes, Heart Disease, and Parkinson's Disease using trained machine learning models.">
+    <meta property="og:site_name" content="MedPredict AI">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Multiple Disease Prediction System — AI Health Diagnostics">
+    <meta name="twitter:description" content="Assess health risks for Diabetes, Heart Disease, and Parkinson's Disease using trained machine learning models.">
+
+    <title>Multiple Disease Prediction System — AI Health Diagnostics</title>
+    <link rel="canonical" href="https://multiple-disease-prediction.onrender.com/">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+</head>
+<body>
+
+    <!-- ══════════ NAVBAR ══════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="navbar-brand" id="nav-brand">
+                <div class="brand-icon">🏥</div>
+                <div class="brand-text"><span>MedPredict</span> AI</div>
+            </a>
+            <ul class="navbar-links" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#diseases">Predictions</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#tech-stack">Technology</a></li>
+                <li><a href="/docs" target="_blank" class="btn btn-sm btn-outline">API Docs</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- ══════════ MAIN CONTENT ══════════ -->
+    <main class="main-content">
+
+        <!-- ── Hero ── -->
+        <section class="hero container" id="home">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                AI-Powered Health Diagnostics
+            </div>
+
+            <h1>
+                Multiple Disease<br>
+                <span class="gradient-text">Prediction System</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Harness the power of machine learning to assess health risks for Diabetes,
+                Heart Disease, and Parkinson's Disease — instantly, accurately, and privately.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#diseases" class="btn btn-primary">
+                    Start Prediction →
+                </a>
+                <a href="#how-it-works" class="btn btn-outline">
+                    Learn More
+                </a>
+            </div>
+        </section>
+
+        <!-- ── Disease Prediction Cards ── -->
+        <section class="section container" id="diseases">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">⚡ Available Predictions</div>
+                <h2 class="section-title">Choose a Disease to Predict</h2>
+                <p class="section-subtitle">
+                    Select a condition below to enter clinical data and receive an instant AI-powered risk assessment.
+                </p>
+            </div>
+
+            <div class="diseases-grid" id="diseases-grid">
+                <!-- Cards are dynamically rendered by app.js -->
+                <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--text-muted);">
+                    Loading available models…
+                </div>
+            </div>
+        </section>
+
+        <!-- ── How It Works ── -->
+        <section class="section container" id="how-it-works">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">📋 Process</div>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">
+                    Get your health risk assessment in four simple steps.
+                </p>
+            </div>
+
+            <div class="steps-grid animate-on-scroll">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Select Disease</h3>
+                    <p class="step-desc">Choose from Diabetes, Heart Disease, or Parkinson's prediction models.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Enter Data</h3>
+                    <p class="step-desc">Fill in the required clinical parameters for the chosen condition.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">AI Analysis</h3>
+                    <p class="step-desc">Our trained ML models analyze the data and generate a prediction.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Get Results</h3>
+                    <p class="step-desc">Receive an instant risk assessment with confidence indicators.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Tech Stack ── -->
+        <section class="section container" id="tech-stack">
+            <div class="section-header animate-on-scroll">
+                <div class="section-label">🛠️ Stack</div>
+                <h2 class="section-title">Technology Behind the AI</h2>
+                <p class="section-subtitle">
+                    Built with production-grade tools trusted across healthcare and industry.
+                </p>
+            </div>
+
+            <div class="tech-grid animate-on-scroll">
+                <div class="tech-item">
+                    <div class="tech-icon">🐍</div>
+                    <span class="tech-name">Python</span>
+                    <span class="tech-role">Backend</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">⚡</div>
+                    <span class="tech-name">FastAPI</span>
+                    <span class="tech-role">API Framework</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🤖</div>
+                    <span class="tech-name">Scikit-learn</span>
+                    <span class="tech-role">ML Models</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔢</div>
+                    <span class="tech-name">NumPy</span>
+                    <span class="tech-role">Computation</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">✅</div>
+                    <span class="tech-name">Pydantic v2</span>
+                    <span class="tech-role">Validation</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🌐</div>
+                    <span class="tech-name">HTML / CSS / JS</span>
+                    <span class="tech-role">Frontend</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Disclaimer ── -->
+        <section class="container" style="padding-bottom: 3rem;">
+            <div class="disclaimer animate-on-scroll">
+                <div class="disclaimer-icon">⚠️</div>
+                <div class="disclaimer-text">
+                    <strong>Medical Disclaimer:</strong> This tool is for educational and informational
+                    purposes only. It is <strong>not</strong> a substitute for professional medical advice,
+                    diagnosis, or treatment. Always consult a qualified healthcare provider for medical concerns.
+                    Model predictions are based on statistical patterns and may not reflect individual circumstances.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text">© 2026 MedPredict AI — Multiple Disease Prediction System</span>
+                <div class="footer-links">
+                    <a href="/docs" target="_blank">API Documentation</a>
+                    <a href="/redoc" target="_blank">ReDoc</a>
+                    <a href="#home">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ══════════ PREDICTION MODAL OVERLAY ══════════ -->
+    <div class="prediction-overlay" id="prediction-overlay">
+        <div class="prediction-panel" id="prediction-panel">
+            <div class="panel-header">
+                <div class="panel-title" id="panel-title">
+                    <!-- Dynamically filled -->
+                </div>
+                <button class="panel-close" id="panel-close" aria-label="Close">✕</button>
+            </div>
+            <div class="panel-body">
+                <form id="prediction-form" novalidate>
+                    <div class="form-grid" id="form-fields">
+                        <!-- Dynamically generated -->
+                    </div>
+                    <div class="form-submit-area">
+                        <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
+                            <span class="btn-text">Analyze & Predict</span>
+                            <div class="spinner"></div>
+                        </button>
+                        <button type="button" class="btn-reset" id="btn-reset">Reset Form</button>
+                    </div>
+                </form>
+
+                <!-- Result -->
+                <div class="result-container" id="result-container">
+                    <div class="result-card" id="result-card">
+                        <div class="result-icon" id="result-icon"></div>
+                        <h3 class="result-title" id="result-title"></h3>
+                        <p class="result-message" id="result-message"></p>
+                        <div class="result-probability" id="result-probability" style="display:none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
