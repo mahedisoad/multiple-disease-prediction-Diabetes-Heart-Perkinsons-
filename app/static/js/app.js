@@ -351,7 +351,7 @@ function observeAnimations() {
 
 // ──────────── Active nav on scroll ────────────
 window.addEventListener("scroll", () => {
-    const sections = ["home", "diseases", "how-it-works", "tech-stack"];
+    const sections = ["home", "diseases", "how-it-works", "tech-stack", "connect"];
     let current = "";
     for (const id of sections) {
         const el = document.getElementById(id);
@@ -364,8 +364,73 @@ window.addEventListener("scroll", () => {
     });
 });
 
+// ──────────── Email Options Modal ────────────
+function initEmailModal() {
+    const emailBtn     = document.getElementById("email-btn-trigger");
+    const emailOverlay = document.getElementById("email-modal-overlay");
+    const emailClose   = document.getElementById("email-modal-close");
+    const btnCopy      = document.getElementById("btn-copy-email");
+    const copyLabel    = document.getElementById("copy-btn-label");
+
+    if (!emailBtn || !emailOverlay) return;
+
+    function openEmailModal(e) {
+        if (e) e.preventDefault();
+        emailOverlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeEmailModal() {
+        emailOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    emailBtn.addEventListener("click", openEmailModal);
+
+    if (emailClose) {
+        emailClose.addEventListener("click", closeEmailModal);
+    }
+
+    emailOverlay.addEventListener("click", (e) => {
+        if (e.target === emailOverlay) closeEmailModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && emailOverlay.classList.contains("active")) {
+            closeEmailModal();
+        }
+    });
+
+    if (btnCopy) {
+        btnCopy.addEventListener("click", async () => {
+            const email = "smsoad007@gmail.com";
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(email);
+                } else {
+                    const temp = document.createElement("input");
+                    temp.value = email;
+                    document.body.appendChild(temp);
+                    temp.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(temp);
+                }
+                btnCopy.classList.add("copied");
+                if (copyLabel) copyLabel.textContent = "Copied! ✓";
+                setTimeout(() => {
+                    btnCopy.classList.remove("copied");
+                    if (copyLabel) copyLabel.textContent = "Copy";
+                }, 2000);
+            } catch (err) {
+                console.error("Copy failed", err);
+            }
+        });
+    }
+}
+
 // ──────────── Init ────────────
 document.addEventListener("DOMContentLoaded", () => {
     loadDiseases();
     observeAnimations();
+    initEmailModal();
 });
