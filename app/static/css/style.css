@@ -799,8 +799,8 @@ body::before {
 /* ── Footer ── */
 .footer {
     border-top: 1px solid var(--border-color);
-    padding: 2rem 0;
-    margin-top: 0;
+    padding: 3rem 0;
+    margin-top: 2rem;
 }
 
 .footer-inner {
@@ -809,16 +809,6 @@ body::before {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 16px;
-}
-
-.footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer-logo {
-    font-size: 1.2rem;
 }
 
 .footer-text {
@@ -840,150 +830,6 @@ body::before {
 
 .footer-links a:hover {
     color: var(--text-primary);
-}
-
-.footer-bottom {
-    margin-top: 1.25rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--border-color);
-    text-align: center;
-}
-
-.footer-credit {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
-.footer-credit a {
-    color: var(--accent-blue);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition-fast);
-}
-
-.footer-credit a:hover {
-    color: var(--accent-cyan);
-}
-
-/* ── Connect With Me Section ── */
-.connect-section {
-    padding: 5rem 0 3rem;
-    position: relative;
-    z-index: 1;
-}
-
-.connect-card {
-    max-width: 520px;
-    margin: 0 auto;
-    text-align: center;
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-xl);
-    padding: 3rem 2.5rem;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    position: relative;
-    overflow: hidden;
-    transition: var(--transition-smooth);
-}
-
-.connect-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 3px;
-    background: var(--gradient-primary);
-    opacity: 0.7;
-}
-
-.connect-card:hover {
-    border-color: var(--border-hover);
-    box-shadow: var(--shadow-glow);
-    transform: translateY(-4px);
-}
-
-.connect-avatar {
-    width: 72px; height: 72px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: white;
-    margin: 0 auto 1.25rem;
-    box-shadow: 0 0 30px var(--accent-blue-glow);
-    letter-spacing: 0.02em;
-}
-
-.connect-name {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 0.35rem;
-    letter-spacing: -0.01em;
-}
-
-.connect-role {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-}
-
-.connect-links {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.connect-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 22px;
-    background: var(--bg-glass);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 0.88rem;
-    font-weight: 500;
-    transition: var(--transition-base);
-}
-
-.connect-link:hover {
-    transform: translateY(-2px);
-    border-color: var(--border-hover);
-    color: var(--text-primary);
-}
-
-.connect-link--linkedin:hover {
-    background: rgba(10, 102, 194, 0.15);
-    border-color: rgba(10, 102, 194, 0.4);
-    color: #0a66c2;
-}
-
-.connect-link--github:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.25);
-    color: var(--text-primary);
-}
-
-.connect-link--email:hover {
-    background: rgba(234, 67, 53, 0.12);
-    border-color: rgba(234, 67, 53, 0.35);
-    color: #ea4335;
-}
-
-.connect-icon {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-}
-
-.connect-link-label {
-    white-space: nowrap;
 }
 
 /* ── Animations ── */
@@ -1065,33 +911,6 @@ body::before {
     .footer-inner {
         flex-direction: column;
         text-align: center;
-    }
-
-    .footer-brand {
-        justify-content: center;
-    }
-
-    .footer-links {
-        justify-content: center;
-    }
-
-    .connect-card {
-        padding: 2rem 1.5rem;
-    }
-
-    .connect-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .connect-link {
-        width: 100%;
-        max-width: 220px;
-        justify-content: center;
-    }
-
-    .connect-section {
-        padding: 3rem 0 2rem;
     }
 
     .steps-grid {
